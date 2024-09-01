@@ -19,4 +19,4 @@ var myComputer = {
   processor: 'i3'
 }
 console.log(myComputer, mobile, shakil);
-console.log(myComputer.color, mobile.brand, shakil.age);
+console.log(myComputer.color, mobile.brand, shakil.agex);
