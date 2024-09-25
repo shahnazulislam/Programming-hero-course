@@ -6,17 +6,20 @@
     <title>github</title>
 </head>
 <body>
+    <!-- logical github delete option [importent] -->
     <!-- setting github delete style in this code -->
     <h1 id="sectet-info">My sectets info</h1>
-    <input type="text">
+    <input id="delete-confurm" type="text">
     <button id="delete-btn" disabled>Delete</button>
 
     <script>
-        document.getElementById('delete-btn').addEventListener('keyup', function(event){
+        document.getElementById('delete-confurm').addEventListener('keyup', function(event){
             const text = event.target.value;
             const deleteButton = document.getElementById('delete-btn');
             if(text === 'delete'){
                 deleteButton.removeAttribute('disabled');
+            }else{
+                deleteButton.setAttribute('disabled', true);
             }
         })
         document.getElementById('delete-btn').addEventListener('click', function(){
