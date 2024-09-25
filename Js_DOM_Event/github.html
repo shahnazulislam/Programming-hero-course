@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>github</title>
+</head>
+<body>
+    <!-- setting github delete style in this code -->
+    <h1 id="sectet-info">My sectets info</h1>
+    <input type="text">
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+        document.getElementById('delete-btn').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const deleteButton = document.getElementById('delete-btn');
+            if(text === 'delete'){
+                deleteButton.removeAttribute('disabled');
+            }
+        })
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            const sectets = document.getElementById('sectet-info');
+            sectets.style.display ='none'; 
+        })
+    </script>
+</body>
+</html>

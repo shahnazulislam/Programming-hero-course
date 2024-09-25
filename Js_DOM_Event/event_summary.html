@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS dom Summary</title>
+</head>
+<body>
+    <h1>Final Dom Event handlers</h1>
+    <!--input fild to data show using js-->
+    <h2 id="update-input-value">defaul input text</h2>
+    <input id="involve-value" type="text" placeholder="fill in your input">
+    <button id="button-update">update</button>
+    <!-- onclick function and also using event listener -->
+    <h3 id="handlers-status">default text</h3>
+    <button onclick="handlelOnclick()">handle event by onclick function</button>
+    <button id="even-listener">Handle event by evenlistener</button>
+
+    <script>
+        function handlelOnclick(){
+            const handlerStatus = document.getElementById('handlers-status');
+            handlerStatus.innerText = 'handle by function attach on onclick attribute';
+        };
+
+        document.getElementById('even-listener').addEventListener('click', function(){
+            const handlerStatus = document.getElementById('handlers-status');
+            handlerStatus.innerText = 'handle by function using the even listener';
+        });
+
+        document.getElementById('button-update').addEventListener('click', function(){
+            const UpdateText = document.getElementById('involve-value');
+            const inputText = UpdateText.value;
+            const upInValue = document.getElementById('update-input-value');
+            upInValue.innerText = inputText;
+            UpdateText.value = '';
+        })
+    </script>
+</body>
+</html>

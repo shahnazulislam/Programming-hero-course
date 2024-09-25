@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more event in js</title>
+</head>
+<body>
+    <!-- event more are explore here such as onclick, mousemove, MouseEnter,  -->
+    <h1>Explore more event</h1>
+    <button id="even-btn">Event</button>
+    <input id="input-fild" type="text">
+
+
+    <script>
+        // document.getElementById('even-btn').addEventListener('click', function(){
+        //     console.log('get the value');
+        // })
+        // document.getElementById('input-fild').addEventListener('mouseenter', function(){
+        //     console.log('redirect data');
+        // })
+        document.getElementById('input-fild').addEventListener('keyup', function(event){
+            console.log(event.target.value);
+        })
+        // document.getElementById('input-fild').addEventListener('focus', function(){
+        //     console.log('redirect data');
+        // })
+    </script>
+    
+</body>
+</html>

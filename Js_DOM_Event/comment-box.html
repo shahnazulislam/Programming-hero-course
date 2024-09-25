@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- first i am click a button like post this is post textariea inner text in to main div into a cild peragrape -->
+    <div id="add-Peragrape">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi impedit, commodi eum non debitis esse.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi impedit, commodi eum non debitis esse.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi impedit, commodi eum non debitis esse.</p>
+    </div>
+    <br>
+    <textarea name="" id="Text-new" cols="30" rows="5"></textarea>
+    <br>
+    <button id="post-btn">Post</button>
+
+    <script>
+        document.getElementById('post-btn').addEventListener('click', function(){
+            const newData = document.getElementById('Text-new');
+            const getText = newData.value;
+            const AddPeragrape = document.getElementById('add-Peragrape')
+            const PTag = document.createElement('p');
+            PTag.innerText = getText;
+            AddPeragrape.appendChild(PTag);
+            newData.value = '';
+        })
+    </script>
+</body>
+</html>
